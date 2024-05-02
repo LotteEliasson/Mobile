@@ -74,6 +74,10 @@ const handleAuth = async () => {
   }
   hideModal();
 }
+
+  const toggleSignUp = () => {
+    setIsSignUp(!isSignUp);
+  }
   
   const showModal = (signUp = false) => {
     setIsSignUp(signUp);
@@ -101,13 +105,18 @@ const handleAuth = async () => {
     
     <View style={styles.authContainer}>
     
-        <View>
+        <View style={styles.topContainer}>
+          <Text>Hello</Text>
+          <Text>Hello</Text>
           <Text>Hello</Text>
         </View>
-        <View style={styles.loginContainer}>
-          <View>
+        <View>
+          <View style={styles.loginContainer}>
+            <TouchableOpacity onPress={() => showModal(true)}>
+              <Text>Sign Up</Text>
+            </TouchableOpacity>
             <TouchableOpacity onPress={() => showModal(false)}>
-             <Text>Login</Text>
+            <Image source={require('./assets/login.png')} style={styles.loginImage}></Image>
             </TouchableOpacity>
           </View>
         
@@ -133,16 +142,17 @@ const handleAuth = async () => {
             style={styles.input}
             onChangeText={setEmail}
             value={email}
-            placeholder='Email'
+            placeholder='Enter Email'
             placeholderTextColor={"#fff"}
           />
           <TextInput
             style={styles.input}
             onChangeText={setPassword}
             value={password}
-            placeholder='Password'
+            placeholder='Enter Password'
             placeholderTextColor={"#fff"}
           />
+          
          <TouchableOpacity
             style={[styles.button, styles.buttonClose]}
             onPress={handleAuth}
@@ -157,12 +167,15 @@ const handleAuth = async () => {
           >
             <Text style={styles.textStyle}>Go Back</Text>
           </TouchableOpacity>
+          
+          <TouchableOpacity onPress={toggleSignUp}>
+            <Text style={styles.notRegistered}>{isSignUp ? 'Already registered? Log in here. ' : 'Not registered? Sign up here.'}</Text>
+          </TouchableOpacity>
         </Animated.View>
       </View>
     </Modal>
 
-      
-    </View>
+  </View>
   )
 }
 
