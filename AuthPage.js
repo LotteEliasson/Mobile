@@ -137,7 +137,14 @@ const handleAuth = async () => {
             },
           ]}
         >
-          <Text style={styles.modalText}>{isSignUp ? 'Sign Up' : 'Login'}</Text>
+          <View style={styles.buttonClose}>
+            <TouchableOpacity onPress={hideModal}>
+              <Image source={require('./assets/closeButton.png')} style={styles.closeImage} ></Image> 
+            </TouchableOpacity>
+          </View>
+          <View>
+            <Text style={styles.modalText}>{isSignUp ? 'Sign Up' : 'Login'}</Text>
+          </View>
           <TextInput
             style={styles.input}
             onChangeText={setEmail}
@@ -154,22 +161,17 @@ const handleAuth = async () => {
           />
           
          <TouchableOpacity
-            style={[styles.button, styles.buttonClose]}
+            style={[styles.button, styles.buttonLogin]}
             onPress={handleAuth}
           >
             <Text style={styles.textStyle}>{isSignUp ? 'Sign Up' : 'Login'}</Text>
           </TouchableOpacity>
 
 
-          <TouchableOpacity
-            style={[styles.button, styles.buttonClose]}
-            onPress={hideModal}
-          >
-            <Text style={styles.textStyle}>Go Back</Text>
-          </TouchableOpacity>
+          
           
           <TouchableOpacity onPress={toggleSignUp}>
-            <Text style={styles.notRegistered}>{isSignUp ? 'Already registered? Log in here. ' : 'Not registered? Sign up here.'}</Text>
+            <Text style={styles.notRegistered}>{isSignUp ? 'If registered? Log in here. ' : 'Not registered? Sign up here.'}</Text>
           </TouchableOpacity>
         </Animated.View>
       </View>

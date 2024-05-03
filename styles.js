@@ -65,12 +65,21 @@ export default StyleSheet.create({
     padding: 10,
     elevation: 2,
   },
-  buttonClose: {
+  buttonLogin: {
     backgroundColor: '#fff',
     paddingHorizontal: 20,
     paddingVertical: 7,
     borderRadius: 5,
     marginTop: 20,
+  },
+  buttonClose: {
+    position: "absolute",
+    top: 20,
+    right: 20,
+  },
+  closeImage: {
+    width: 20,
+    height: 20,
   },
   textStyle: {
     color: '#afc9c8',
