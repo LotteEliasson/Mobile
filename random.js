@@ -1,7 +1,6 @@
 import { getAuth, signOut} from 'firebase/auth';
 import { app } from './firebaseTest';
 import { View, Text, Button } from "react-native"
-import MapPage from './MapPage';
 
 import styles from './styles';
 
@@ -11,7 +10,7 @@ export default function TestPage({ navigation }){
   async function sign_out(){
     await signOut(auth)
     console.log("Signed out")
-    navigation.navigate('MapPage');
+    navigation.navigate('AuthPage');
   }
 
 
