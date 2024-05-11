@@ -35,6 +35,10 @@ export default StyleSheet.create({
     
   },
 
+  welcomeText:{
+    color: '#000'
+  },
+
 // Modal
   centeredView: {
     flex: 1,

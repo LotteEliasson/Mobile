@@ -18,7 +18,7 @@ export default function App(){
         screenOptions={{ headerShown: false}}
       >
         <Stack.Screen name="AuthPage" component={AuthPage} />
-        <Stack.Screen name="TestPage" component={MapPage} />
+        <Stack.Screen name="MapPage" component={MapPage} />
         <Stack.Screen name="TestPage" component={TestPage} />
 
       </Stack.Navigator>
