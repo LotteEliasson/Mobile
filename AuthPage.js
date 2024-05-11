@@ -103,7 +103,7 @@ const handleAuth = async () => {
 
   return(
     <ImageBackground
-      source={require('./assets/Welcome.png')} 
+      source={require('./assets/WelcomeImg.png')} 
       style={styles.backgroundImage} 
       resizeMode="cover" 
     >
