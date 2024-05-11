@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import AuthPage from './AuthPage';
 import TestPage from './TestPage';
+import MapPage from './MapPage';
 
 export default function App(){
 
@@ -17,6 +18,7 @@ export default function App(){
         screenOptions={{ headerShown: false}}
       >
         <Stack.Screen name="AuthPage" component={AuthPage} />
+        <Stack.Screen name="TestPage" component={MapPage} />
         <Stack.Screen name="TestPage" component={TestPage} />
 
       </Stack.Navigator>

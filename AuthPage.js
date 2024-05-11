@@ -50,7 +50,7 @@ const AuthPage = ({ navigation }) => {
 
   useEffect(() => {
     if (userId) {
-      navigation.navigate('TestPage', {
+      navigation.navigate('MapPage', {
         userId: userId,
         userEmail: userEmail,
       });
