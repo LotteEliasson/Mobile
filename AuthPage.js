@@ -102,7 +102,11 @@ const handleAuth = async () => {
   };
 
   return(
-    
+    <ImageBackground
+      source={require('./assets/Welcome.png')} 
+      style={styles.backgroundImage} 
+      resizeMode="cover" 
+    >
     <View style={styles.authContainer}>
     
         <View style={styles.topContainer}>
@@ -178,6 +182,7 @@ const handleAuth = async () => {
     </Modal>
 
   </View>
+  </ImageBackground>
   )
 }
 

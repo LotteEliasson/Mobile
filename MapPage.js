@@ -23,8 +23,6 @@ const MapPage = ({navigation, route}) => {
         style = {styles.map}
       >
 
-
-
       </MapView>
 
 

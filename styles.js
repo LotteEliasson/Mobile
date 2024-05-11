@@ -38,6 +38,11 @@ export default StyleSheet.create({
   welcomeText:{
     color: '#000'
   },
+  backgroundImage: {
+    flex: 1,
+    width: '100%', // Ensure it covers the full width of the screen
+    height: '100%' // Ensure it covers the full height of the screen
+  },
 
 // Modal
   centeredView: {
